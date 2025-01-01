@@ -18,8 +18,7 @@ watch(isOpen, (newVal) => {
 <template>
   <!-- Conteneur principal avec fond semi-transparent si le menu est ouvert -->
   <div :class="isOpen ? 'bg-opacity-50' : ''" class="relative">
-
-    <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-4 bg-black text-white">
+    <nav class="fixed top-0 left-0 right-0 mx-4 z-50 flex items-center justify-between p-4 bg-gray-400 rounded-full mt-4 bg-opacity-30 backdrop-blur-lg text-white">
       <!-- Nom à gauche -->
       <div class="text-xl font-bold">&lt;Khaled/&gt;</div>
 
@@ -28,19 +27,17 @@ watch(isOpen, (newVal) => {
         <button @click="toggleMenu" class="focus:outline-none">
           <i 
             class="pi text-white text-2xl transition-transform duration-300" 
-            :class="isOpen ? 'pi-times rotate-90' : 'pi-bars'"
-          ></i>
+            :class="isOpen ? 'pi-times rotate-90' : 'pi-bars'"></i>
         </button>
       </div>
 
       <!-- Menu déroulant sur petits écrans avec animation de glissement -->
       <transition name="slide">
         <div v-if="isOpen" 
-             class="absolute top-16 right-0 bg-black bg-opacity-90 text-white rounded-lg shadow-lg p-6 w-60 lg:hidden">
+             class="absolute top-20 right-0 bg-gray-400 bg-opacity-30 text-white rounded-lg shadow-lg p-6 w-60 lg:hidden backdrop-blur-lg">
           <ul class="flex flex-col space-y-6">
             <li><RouterLink :to="'/'" @click="toggleMenu">Accueil</RouterLink></li>
             <li><RouterLink :to="'/projets'" @click="toggleMenu">Projets</RouterLink></li>
-            <li><RouterLink :to="'/education'" @click="toggleMenu">Éducation</RouterLink></li>
             <li><RouterLink :to="'/services'" @click="toggleMenu">Services</RouterLink></li>
           </ul>
         </div>
@@ -63,5 +60,10 @@ watch(isOpen, (newVal) => {
   opacity: 0;
 }
 
-/* Vous pouvez ajouter des styles pour l'élément fixe ici */
+/* Effet de flou avec backdrop-filter */
+.backdrop-blur-lg {
+  backdrop-filter: blur(10px);
+}
+
+/* Vous pouvez ajouter d'autres styles spécifiques ici */
 </style>

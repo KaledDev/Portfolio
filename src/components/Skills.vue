@@ -1,4 +1,16 @@
 <script setup>
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  AOS.init({
+    duration: 800, // controls speed of animations
+    easing: 'ease-in-out', // controls easing
+  });
+});
+
+
   const skills = [
     {image: '/images/4.svg' },
     {image: '/images/8.svg' },
@@ -14,6 +26,9 @@
     {image: '/images/kotlin-logo-3-removebg-preview.png' },
     {image: '/images/33.svg' },
     {image: '/images/jetpack_compose_icon_RGB-removebg-preview.png' },
+    {image: '/images/Angular_full_color_logo.svg.png'},
+    {image: '/images/ionic-removebg-preview.png'},
+    {image: '/images/elephant.png'},
   ];
 
   const tools = [
@@ -32,7 +47,7 @@
   <div class="p-4 mt-8">
     <h2 class="text-2xl font-bold text-center text-white mb-10">Compétences Techniques</h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-      <div v-for="skill in skills" :key="skill.image" class="text-center p-4 bg-[#292929] rounded-lg shadow-lg">
+      <div v-for="skill in skills" :key="skill.image" data-aos="flip-left" class="card text-center p-4 bg-[#292929] rounded-lg shadow-lg">
         <img :src="skill.image" alt="skills" class="w-24 h-24 mx-auto mb-4"/>
       </div>
     </div>
@@ -40,10 +55,20 @@
     <div class="mt-12">
       <h2 class="text-2xl font-bold text-center text-white mb-8">Outils</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div v-for="tool in tools" :key="tool.icon" class="text-center p-4 bg-[#292929] rounded-lg shadow-lg">
+        <div v-for="tool in tools" :key="tool.icon" data-aos="flip-left" class="card text-center p-4 bg-[#292929] rounded-lg shadow-lg">
           <img :src="tool.icon" alt="tool" class="w-24 h-24 mx-auto mb-4"/>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+.card {
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.card:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+}
+</style>

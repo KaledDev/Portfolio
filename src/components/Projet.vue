@@ -1,7 +1,7 @@
 <!-- src/components/Projets.vue -->
 <template>
-    <section class="projets my-10 px-6 mt-20">
-      <h2 class="text-3xl font-bold text-center text-white mb-6">Mes Projets</h2>
+    <section class="projets my-10 px-6 mt-24">
+      <h2 class="text-3xl font-bold text-center text-[#3ccf91] mb-6">Mes Projets</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <div v-for="(projet, index) in projets" :key="index" class="bg-[#080808] shadow-lg rounded-lg overflow-hidden">
           <!-- Image en haut -->
@@ -22,13 +22,19 @@
           </div>
         </div>
       </div>
+      <div class="mt-10 flex justify-center">
+        <a 
+          href="https://github.com/KaledDev" 
+          target="_blank"
+          class="px-6 py-3 bg-[#3ccf91] text-black font-semibold rounded-md shadow-md hover:bg-[#34b57f] transition duration-300">
+          Voir tous les projets
+        </a>
+      </div>
     </section>
-    <Footer/>
   </template>
   
   <script setup>
-  import Footer from '@/components/Footer.vue';
-    const projets = [
+      const projets = [
     {
       titre: "Application web collaborative pour les professionnels de l'IT",
       description: "Développée après 3 mois de formation en developpement fullstack à Orange Digital Center(ODC).",

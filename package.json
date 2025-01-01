@@ -12,6 +12,8 @@
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/vue-fontawesome": "^3.0.8",
+    "animate.css": "^4.1.1",
+    "aos": "^2.3.4",
     "portfolio": "file:",
     "primeicons": "^7.0.0",
     "typewriter-effect": "^2.21.0",
