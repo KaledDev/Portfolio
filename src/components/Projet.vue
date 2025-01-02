@@ -31,9 +31,11 @@
         </a>
       </div>
     </section>
+    <Footer/>
   </template>
   
   <script setup>
+  import Footer from '@/components/Footer.vue';
       const projets = [
     {
       titre: "Application web collaborative pour les professionnels de l'IT",
