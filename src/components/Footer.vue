@@ -7,10 +7,8 @@
   <script setup>
   import { onMounted, ref } from 'vue';
   
-  // Création d'une référence réactive pour l'année actuelle
   const currentYear = ref(0);
   
-  // Mettre à jour l'année lorsque le composant est monté
   onMounted(() => {
     currentYear.value = new Date().getFullYear();
   });

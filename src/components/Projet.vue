@@ -1,4 +1,3 @@
-<!-- src/components/Projets.vue -->
 <template>
     <section class="projets my-10 px-6 mt-24">
       <h2 class="text-3xl font-bold text-center text-[#3ccf91] mb-6">Mes Projets</h2>
@@ -31,11 +30,17 @@
         </a>
       </div>
     </section>
-    <Footer/>
+    <Footer v-if="showFooter"/>
   </template>
   
   <script setup>
-  import Footer from '@/components/Footer.vue';
+  import Footer from './Footer.vue';
+      defineProps({
+      showFooter: {
+        type: Boolean,
+        default: true,
+      },
+    });
       const projets = [
     {
       titre: "Application web collaborative pour les professionnels de l'IT",

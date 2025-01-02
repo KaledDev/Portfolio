@@ -7,7 +7,7 @@ import Projet from '@/components/Projet.vue';
 
 <template>
 <Presentation/>
-<Projet/>
+<Projet :showFooter="false" />
 <Contact/>
 <Footer/>
 </template>
