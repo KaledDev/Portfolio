@@ -46,16 +46,16 @@ onMounted(() => {
 <template>
   <div class="p-4 mt-8">
     <h2 class="text-2xl font-bold text-center text-white mb-10">Compétences Techniques</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-      <div v-for="skill in skills" :key="skill.image" data-aos="flip-left" class="card text-center p-4 bg-[#292929] rounded-lg shadow-lg">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-6 lg:justify-items-center lg:grid-cols-4 lg:mx-64">
+      <div v-for="skill in skills" :key="skill.image" data-aos="flip-left" class="card text-center p-4 bg-[#292929] rounded-lg shadow-lg lg:w-36 lg:h-30">
         <img :src="skill.image" alt="skills" class="w-24 h-24 mx-auto mb-4"/>
       </div>
     </div>
 
     <div class="mt-12">
       <h2 class="text-2xl font-bold text-center text-white mb-8">Outils</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div v-for="tool in tools" :key="tool.icon" data-aos="flip-left" class="card text-center p-4 bg-[#292929] rounded-lg shadow-lg">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:justify-items-center lg:gap-6 r lg:mx-64">
+        <div v-for="tool in tools" :key="tool.icon" data-aos="flip-left" class="card text-center p-4 bg-[#292929] rounded-lg shadow-lg lg:w-36 lg:h-30">
           <img :src="tool.icon" alt="tool" class="w-24 h-24 mx-auto mb-4"/>
         </div>
       </div>

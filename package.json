@@ -16,6 +16,7 @@
     "@vercel/speed-insights": "^1.1.0",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
+    "lucide-vue-next": "^0.469.0",
     "portfolio": "file:",
     "primeicons": "^7.0.0",
     "typewriter-effect": "^2.21.0",
