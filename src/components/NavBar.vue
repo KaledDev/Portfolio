@@ -4,9 +4,9 @@
       <!-- Conteneur de navigation -->
       <div class="flex items-center justify-between p-4 bg-gray-400 rounded-full mt-4 bg-opacity-30 backdrop-blur-lg text-white lg:max-w-7xl lg:mx-auto lg:mt-6">
         <!-- Logo -->
-        <div class="text-xl font-bold lg:bg-clip-text lg:text-White lg:bg-gradient-to-r lg:from-[#3ccf91] lg:to-emerald-500">
+        <RouterLink to="/" class="text-xl font-bold lg:bg-clip-text lg:text-White lg:bg-gradient-to-r lg:from-[#3ccf91] lg:to-emerald-500">
           &lt;Khaled/&gt;
-        </div>
+        </RouterLink>
 
         <!-- Menu desktop -->
         <ul class="hidden lg:flex items-center space-x-12">
